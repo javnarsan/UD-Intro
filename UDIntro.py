@@ -63,12 +63,11 @@ print(a)
   Ej: su clave es: 1540 y X debería devolver su clave es: XXXX
 '''
 
-print("Introduzca una cadena de texto con numeros")
-a=input()
-print("Introduzca un caracter por el que quiera sustituir los numeros")
-b=input()
 
-for i in range(len(a)):
-    if(a[i].isdigit):
-        a = a.replace(a[i],b)
+a=input("Introduzca una cadena de texto con numeros\n")
+b=input("Introduzca un caracter por el que quiera sustituir los numeros\n")
+
+for i in a:
+    if(i.isdigit):
+        a = a.replace(i,b)
 print(a)
