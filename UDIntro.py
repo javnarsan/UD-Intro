@@ -72,3 +72,4 @@ for i in range(len(a)):
     if(a[i].isdigit):
         a = a.replace(a[i],b)
 print(a)
+#prueba git
