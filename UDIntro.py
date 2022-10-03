@@ -61,13 +61,36 @@ print(a)
 5. Crear un programa que lea por teclado una cadena y un carácter,
  y reemplace todos los dígitos en la cadena por el carácter.
   Ej: su clave es: 1540 y X debería devolver su clave es: XXXX
-'''
+
 
 
 a=input("Introduzca una cadena de texto con numeros\n")
 b=input("Introduzca un caracter por el que quiera sustituir los numeros\n")
-
 for i in a:
-    if(i.isdigit):
+    if(i.isdigit()):
         a = a.replace(i,b)
 print(a)
+'''
+
+#Ejercicio 6
+
+'''
+6. Crear un programa que lea por teclado una cadena y un carácter,
+ e inserte el carácter cada 3 dígitos en la cadena.
+  Ej. 2552552550 y . debería devolver 255.255.255.0
+
+a=input("Introduzca un número\n")
+b=input("Introduzca un caracter que quiera intercalar cada 3 dígitos\n")
+c=""
+for i in range(0,len(a)):
+    c=c+a[i]
+    if((i+1)%3==0 and i!=len(a)-1):
+        c=c+b
+print(c)
+'''
+
+#Ejercicio 7
+
+'''
+
+'''
