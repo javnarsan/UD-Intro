@@ -92,5 +92,38 @@ print(c)
 #Ejercicio 7
 
 '''
+7. Crea un programa python que lea una cadena de caracteres y muestre la siguiente información:
+
+- La primera letra de cada palabra. Por ejemplo, si recibe Universal Serial Bus debe devolver USB.
+
+- Dicha cadena con la primera letra de cada palabra en mayúsculas. 
+Por ejemplo, si recibe república argentina debe devolver República Argentina.
+
+
+
+a=input("Escriba una cadena de texto\n")
+b=""
+c=""
+d=a.split(" ")
+for i in range (len(d)):
+    b=b+((d[i])[0]).capitalize()
+    for j in range(len((d[i]))):
+        if(j==0):
+            c=c+" "+(d[i])[j].capitalize()
+        else:
+            c=c+(d[i])[j]
+
+print("Siglas: \n",b)
+print("La misma cadena pero con la primera letra de cada palabra en mayus:\n",c)
 
 '''
+
+#Ejercicio 8
+
+'''
+8. Escribe una función es_par que tome un número x como entrada y 
+devuelva True si x es par y False si no lo es.
+'''
+
+a=input("Introduzca un numero")
+
