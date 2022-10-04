@@ -20,7 +20,6 @@ for i in range(0,len(a)):
     c=a[i]+c
 print(c)
 '''
-
 #Ejercicio 3
 
 '''
@@ -123,7 +122,59 @@ print("La misma cadena pero con la primera letra de cada palabra en mayus:\n",c)
 '''
 8. Escribe una función es_par que tome un número x como entrada y 
 devuelva True si x es par y False si no lo es.
+
+a=4
+def es_par(x):
+    if(x%2==0):
+        return True
+    else:
+        return False
+print(es_par(a))
 '''
 
-a=input("Introduzca un numero")
+#Ejercicio 9
 
+'''
+9. Escribe una función factorial que tome como entrada un entero x y devuelva el factorial de ese número.
+
+
+def factorial(x):
+    res=1
+    for i in range(1,x+1):
+        res*=i
+    return res
+print(factorial(5))
+'''
+
+#Ejercicio 10
+
+'''
+10. Escribe una función es_primo que tome un número x como entrada y devuelva el booleano True si x es primo y False si no lo es.
+
+def es_primo(x):
+    for i in range(2,x):
+        if(x%i==0):
+            return False
+        elif(i==x-1):
+            return True
+            
+print(es_primo(104729))
+
+'''
+
+#Ejercicio 11
+
+'''
+11. Escribe una función anti_vocal que tome como entrada un string texto y devuelva el texto sin las vocales.
+'''
+a="murcielago"
+def isVowel(char):
+    if char == 'a' or 'e' or 'i' or 'o' or 'u' or 'A' or 'E' or 'I' or 'O' or 'U':
+        return True
+    else:
+        return False
+def anti_vocal(x):
+    for i in x:
+        if(isVowel(i)):
+            x=x.replace(i,"")
+print(anti_vocal(a))
