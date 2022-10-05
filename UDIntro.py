@@ -1,3 +1,4 @@
+#RELACION 1
 #Ejercicio 2, ultima parte
 '''
 Crear un programa que lea por teclado una cadena, y muestre la siguiente información:
@@ -166,7 +167,7 @@ print(es_primo(104729))
 
 '''
 11. Escribe una función anti_vocal que tome como entrada un string texto y devuelva el texto sin las vocales.
-'''
+
 a="murcielago"
 def isVowel(char):
     if char == 'a' or 'e' or 'i' or 'o' or 'u' or 'A' or 'E' or 'I' or 'O' or 'U':
@@ -178,3 +179,100 @@ def anti_vocal(x):
         if(isVowel(i)):
             x=x.replace(i,"")
 print(anti_vocal(a))
+
+No funciona, habria que arreglaro
+'''
+
+#RELACION 2
+
+#Ejercicio 1
+
+'''
+1.  Realiza un módulo que haga operaciones aritméticas entre dos números
+(suma, resta, producto, división). 
+A continuación, en otro fichero, importa el módulo y prueba alguna de las operaciones anteriores.
+
+import FuncionesAritmeticas
+
+a=45
+b=12
+
+print(FuncionesAritmeticas.suma(a,b))
+print(FuncionesAritmeticas.resta(a,b))
+print(FuncionesAritmeticas.producto(a,b))
+print(FuncionesAritmeticas.division(a,b))
+
+'''
+
+#Ejercicio 2
+
+'''
+2. Imprime el directorio actual de trabajo.
+
+import os
+os.getcwd()
+'''
+
+#Ejercicio 3
+
+'''
+3. Pide por teclado un directorio de tu disco duro y elimínalo.
+
+from os import rmdir,mkdir
+#mkdir("C:/Users/beris/OneDrive/Escritorio/DAM/borrar")
+#rmdir("C:/Users/beris/OneDrive/Escritorio/DAM/borrar")
+'''
+
+#Ejercicio 4
+
+'''
+4. Copia un directorio de tu disco duro a otra ubicación
+
+import shutil,os
+os.mkdir("C:/Users/beris/OneDrive/Escritorio/DAM/borrar")
+shutil.move("C:/Users/beris/OneDrive/Escritorio/DAM/borrar","C:/Users/beris/OneDrive/Escritorio")
+'''
+
+#Ejercicio 5
+
+
+#5. Liste recursivamente el contenido de su directorio de usuario 
+#(C:\Users\alumno). Muestre cada ruta en una línea, y etiquete cada una como DIRECTORIO 
+#o como FICHERO.
+
+#import os
+#ficheros = os.scandir("C:/Users/beris")
+#for fichero in ficheros:
+#    if(fichero.is_dir()):
+#        print(fichero.name," DIRECTORIO")
+#    elif(fichero.is_file()):
+#        print(fichero.name," FICHERO")
+
+
+#Ejercicio 6
+
+'''
+6.  Liste todos los archivos ejecutables (extensión '.exe') del directorio C:\Windows\system32. 
+
+
+import os,fnmatch
+ficheros = os.scandir("C:/Windows/system32")
+for fichero in ficheros:
+    if os.path.isfile(fichero):
+            if fnmatch.fnmatch(fichero, '*.exe'):
+                print(fichero)
+'''
+
+#Ejercicio 7
+
+'''
+7. Realice un listado de ficheros del directorio C:\windows\system32. 
+Almacene en un fichero llamado "listado_windows.txt" la ruta y tamaño de 
+cada fichero con el formato siguiente: ruta;tamaño con una linea para cada fichero encontrado. 
+'''
+import os
+a = open("C:/Users/beris/OneDrive/Escritorio/DAM/ficheroTexto.txt", "w")
+for path, subdirs, files in os.walk("C:/Windows/system32"):
+   for filename in files:
+        f = os.path.join(filename)
+        a.write(str(f) + os.linesep) 
